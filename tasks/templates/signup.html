@@ -1,12 +1,20 @@
 <h1>signup</h1>
 
 <form action="/signup/" method="post">
-    <!-- Aquí van los campos del formulario -->
-    {% csrf_token %} 
+  <!-- Aquí van los campos del formulario -->
+  {% csrf_token %} {{form.as_p}} {% if error is not none %}
+  <div
+    style="
+      background-color: #f44336;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    "
+  >
+    <p style="font-size: 18px">{{error}}</p>
+  </div>
+  {% endif %}
 
-    {{form.as_p}}
-    <!-- Botón de enviar -->
-    <input type="submit" value="Enviar">
+  <!-- Botón de enviar -->
+  <input type="submit" value="Enviar" />
 </form>
-
-
