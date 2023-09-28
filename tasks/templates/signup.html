@@ -1,0 +1,12 @@
+<h1>signup</h1>
+
+<form action="/signup/" method="post">
+    <!-- Aquí van los campos del formulario -->
+    {% csrf_token %} 
+
+    {{form.as_p}}
+    <!-- Botón de enviar -->
+    <input type="submit" value="Enviar">
+</form>
+
+
