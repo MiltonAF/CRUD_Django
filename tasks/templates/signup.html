@@ -5,7 +5,7 @@
 
 <h1>signup</h1>
 
-<form action="/signup/" method="post">
+<form action="/signup/" lang="es" method="post">
   <!-- Aquí van los campos del formulario -->
   {% csrf_token %} {{form.as_p}} {% if error is not none %}
   <div
